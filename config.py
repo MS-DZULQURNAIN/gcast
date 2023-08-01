@@ -12,16 +12,6 @@ API_HASH = getenv("API_HASH") #optional
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "").split()))
 DEEP_AI = getenv("DEEP_AI", "d7394561-0528-4714-a1ee-edd7020b48e1")
 OWNER_ID = int(getenv("OWNER_ID") or 0)
-ADMIN1_ID = list(map(int, getenv("ADMIN1_ID", "1814359323").split()))
-ADMIN2_ID = list(map(int, getenv("ADMIN2_ID", "1814359323").split()))
-ADMIN3_ID = list(map(int, getenv("ADMIN2_ID", "1814359323").split()))
-ADMIN4_ID = list(map(int, getenv("ADMIN2_ID", "1814359323").split()))
-
-
-ADMIN1_ID.append(1814359323)
-ADMIN2_ID.append(1814359323)
-ADMIN3_ID.append(1814359323)
-ADMIN4_ID.append(1814359323)
 
 MONGO_URL = getenv("MONGO_URL", "")
 BOT_TOKEN = getenv("BOT_TOKEN")
@@ -38,7 +28,7 @@ GIT_TOKEN = getenv("GIT_TOKEN") #personal access token
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 BRANCH = getenv("BRANCH", "naya") #don't change
-REPO_URL = getenv("REPO_URL", "https://github.com/MS-DZULQURNAIN/DzPyro")
+REPO_URL = getenv("REPO_URL", "https://github.com/MS-DZULQURNAIN/gcast")
 CMD_HNDLR = getenv("CMD_HNDLR", ".")
 SUPPORT = int(getenv("SUPPORT", "-1001807401815"))
 CHANNEL = int(getenv("CHANNEL", "-1001853004831"))
