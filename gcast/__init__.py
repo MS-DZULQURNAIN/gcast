@@ -14,7 +14,7 @@ from pytgcalls import GroupCallFactory
 from ast import parse
 from .logging import LOGGER
 from config import *
-cmds = [".", "^", "!", "?", ","]
+cmds = [".", "^", "!", "?", ",", "@", "#", "$", "&", "-", "+", "*", "~", "•", "√", "π", "÷", "×", "¶", "∆"]
 CMD_HELP = {}
 clients = []
 ids = []
@@ -37,12 +37,12 @@ asyncio.set_event_loop(event_loop)
 class Bot(Client):
     def __init__(self):
         super().__init__(
-            name="ubot",
+            name="gcast",
             api_hash=API_HASH,
             api_id=API_ID,
             bot_token=BOT_TOKEN,
             workers=BOT_WORKERS,
-            plugins=dict(root="Ubot/modules/bot"),
+            plugins=dict(root="gcast/bot"),
         )
         self.LOGGER = LOGGER
 
@@ -55,7 +55,7 @@ class Bot(Client):
 
     async def stop(self, *args):
         await super().stop()
-        self.LOGGER(__name__).info("Amang stopped. Bye.")
+        self.LOGGER(__name__).info("User Gcast Bot stopped. Bye.")
 
 
 app = Bot()
@@ -71,7 +71,7 @@ bot1 = (
         api_hash=API_HASH,
         session_string=SESSION1,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION1
@@ -85,7 +85,7 @@ bot2 = (
         api_hash=API_HASH,
         session_string=SESSION2,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION2
@@ -99,7 +99,7 @@ bot3 = (
         api_hash=API_HASH,
         session_string=SESSION3,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION3
@@ -113,7 +113,7 @@ bot4 = (
         api_hash=API_HASH,
         session_string=SESSION4,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION4
@@ -127,7 +127,7 @@ bot5 = (
         api_hash=API_HASH,
         session_string=SESSION5,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION5
@@ -140,7 +140,7 @@ bot6 = (
         api_hash=API_HASH,
         session_string=SESSION6,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION6
@@ -154,7 +154,7 @@ bot7 = (
         api_hash=API_HASH,
         session_string=SESSION7,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION7
@@ -168,7 +168,7 @@ bot8 = (
         api_hash=API_HASH,
         session_string=SESSION8,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION8
@@ -182,7 +182,7 @@ bot9 = (
         api_hash=API_HASH,
         session_string=SESSION9,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION9
@@ -196,7 +196,7 @@ bot10 = (
         api_hash=API_HASH,
         session_string=SESSION10,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION10
@@ -210,7 +210,7 @@ bot11 = (
         api_hash=API_HASH,
         session_string=SESSION11,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION11
@@ -224,7 +224,7 @@ bot12 = (
         api_hash=API_HASH,
         session_string=SESSION12,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION12
@@ -238,7 +238,7 @@ bot13 = (
         api_hash=API_HASH,
         session_string=SESSION13,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION13
@@ -252,7 +252,7 @@ bot14 = (
         api_hash=API_HASH,
         session_string=SESSION14,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION14
@@ -266,7 +266,7 @@ bot15 = (
         api_hash=API_HASH,
         session_string=SESSION15,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION15
@@ -280,7 +280,7 @@ bot16 = (
         api_hash=API_HASH,
         session_string=SESSION16,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION16
@@ -294,7 +294,7 @@ bot17 = (
         api_hash=API_HASH,
         session_string=SESSION17,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION17
@@ -308,7 +308,7 @@ bot18 = (
         api_hash=API_HASH,
         session_string=SESSION18,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION18
@@ -322,7 +322,7 @@ bot19 = (
         api_hash=API_HASH,
         session_string=SESSION19,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION19
@@ -336,7 +336,7 @@ bot20 = (
         api_hash=API_HASH,
         session_string=SESSION20,
         workers=USER_WORKERS,
-        plugins=dict(root="Ubot/modules"),
+        plugins=dict(root="gcast/modules"),
         in_memory=True,
     )
     if SESSION20
