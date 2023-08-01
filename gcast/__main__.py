@@ -6,12 +6,12 @@ from pyrogram import idle
 
 from uvloop import install
 from ubotlibs import *
-from Ubot import aiosession, bots, app, ids, event_loop
+from gcast import aiosession, bots, app, ids, event_loop
 from platform import python_version as py
 from .logging import LOGGER
 from pyrogram import __version__ as pyro
-from Ubot.modules import ALL_MODULES
-from Ubot.core.db import *
+from gcast.modules import ALL_MODULES
+from gcast.core.database import *
 from Ubot.core import *
 from config import SUPPORT, CHANNEL
 import os
@@ -34,7 +34,7 @@ MSG_ON = """
 
 async def main():
     await app.start()
-    LOGGER("Azazel Ubot").info("Memulai Ubot Pyro..")
+    LOGGER("USER GCAST BOT").info("Memulai Ubot Pyro..")
     for all_module in ALL_MODULES:
         importlib.import_module("Ubot.modules" + all_module)
     for bot in bots:
@@ -62,7 +62,7 @@ async def main():
 
 
 if __name__ == "__main__":
-    LOGGER("Azazel Ubot").info("Starting  Ubot")
+    LOGGER("USER GCAST BOT").info("Starting  Ubot")
     install()
     event_loop.run_until_complete(main())
 
