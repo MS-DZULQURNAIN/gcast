@@ -5,9 +5,9 @@ from pyrogram import Client, filters
 from pyrogram.errors import MessageDeleteForbidden
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
-from Ubot import CMD_HELP, app
-from Ubot.core import *
-from Ubot import ids as users
+from gcast import CMD_HELP, app
+from gcast.core import *
+from gcast import ids as users
 from config import SUPPORT, CHANNEL
 
 
